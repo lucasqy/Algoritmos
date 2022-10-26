@@ -1,0 +1,39 @@
+/*
+    Escreva em C a função VERIFICA. A função recebe um número inteiro (n). A função deve
+    devolver na variável resto o resto inteiro da divisão. A função deve retornar se o número (n) é
+    par (1) ou ímpar (0)
+*/
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+#include<math.h>
+#include<locale.h>
+#include<string.h>
+
+int function(int a){
+
+    int resto;
+    
+    resto= a % 2;
+    
+    if(resto==0){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+
+
+int main(){
+
+    setlocale(LC_ALL, "Portuguese");
+    
+    int a;
+    
+    printf("Insira um um numero para ser divido por 2:\n");
+    scanf("%d",&a);
+    
+    printf("%d",function(a));
+}
