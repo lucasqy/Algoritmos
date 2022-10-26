@@ -1,0 +1,29 @@
+/*
+    Realize a soma de dois elementos. Faça isso através de uma função, a qual será chamada
+    na função principal.
+*/
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+
+int function(int a, int b){
+
+    int soma;
+
+    soma= a + b;
+
+    return(soma);
+}
+
+int main(){
+
+    int a , b;
+    int soma;
+
+    printf("Entre com os numeros a serem somados:\n");
+    scanf("%d",&a);
+    scanf("%d",&b);
+
+    printf("%d",function(a,b));
+}
