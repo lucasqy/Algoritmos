@@ -1,0 +1,36 @@
+/*
+    Escreva a função: VOGAIS. A função recebe uma string (nome) e retorna a quantidade de
+    vogais da string.
+*/
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+
+int function(char nome[15]){
+
+    char vogais[11] = "AEIOUaeiou";
+    int contvogais=0;
+
+    for(int i=0; i < strlen(nome); i++){
+        for(int j=0; j<strlen(vogais); j++)
+        if(nome[i]==vogais[j]){
+
+            contvogais++;
+        }
+    }
+
+    return(contvogais);
+}
+int main(){
+
+    char nome[15];
+
+    printf("Insira um nome:\n");
+    gets(nome);
+
+    printf("A quantidade de vogais  eh: %d",function(nome));
+
+
+
+}
