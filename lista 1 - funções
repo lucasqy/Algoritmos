@@ -1,0 +1,121 @@
+/*
+    Escreva um programa que calcule as seguintes operacoes entre dois numeros dados:
+    Adicao, Diferenca, Multiplicacao, Divisao, Exponeciacao e Media.
+
+*/
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+#include<math.h>
+
+int Adicao(int a, int b){
+
+    int Adicao;
+
+    Adicao= a + b;
+
+    return(Adicao);
+}
+
+int Diferenca(int a, int b){
+
+    int Diferenca;
+
+    Diferenca= a - b;
+
+    return(Diferenca);
+}
+
+int Multiplicacao(int a, int b){
+
+    int Multiplicacao;
+
+    Multiplicacao= a * b;
+
+    return(Multiplicacao);
+}
+
+int Divisao(int a, int b){
+
+    int Divisao;
+
+    Divisao= a / b;
+
+    return(Divisao);
+}
+
+int Exponeciacao(int a, int b){
+
+    int Exponeciacao;
+
+    Exponeciacao= pow(a , b);
+
+    return(Exponeciacao);
+}
+
+int Media(int a, int b){
+
+    int Media;
+
+    Media= (a + b) / 2;
+
+    return(Media);
+}
+
+int main(){
+
+    int op;
+    int a=2 , b=2;
+
+    /*printf("Entre com os numeros.\n");
+    scanf("%d",&a);
+    scanf("%d",&b);*/
+
+    printf("Insira 1 para somar.\n");
+    printf("Insira 2 para subtrair.\n");
+    printf("Insira 3 para multiplicar.\n");
+    printf("Insira 4 para dividir.\n");
+    printf("Insira 5 para fazer a exponenciacao.\n");
+    printf("Insira 6 para fazer a media.\n");
+    printf("Insira 7 para fechar o algoritmo.\n");
+    scanf("%d",&op);
+
+    switch(op){
+
+        case 1:
+            printf("resultado:%d",Adicao(a,b));
+
+         break;
+
+        case  2:
+            printf("resultado:%d",Diferenca(a,b));
+
+        break;
+
+        case 3:
+            printf("resultado:%d",Multiplicacao(a,b));
+
+        break;
+
+        case 4:
+            printf("resultado:%d",Divisao(a,b));
+
+        break;
+
+        case 5:
+            printf("resultado:%d",Exponeciacao(a,b));
+
+        break;
+
+        case 6:
+            printf("resultado:%d",Media(a,b));
+
+        break;
+
+        case 7:
+            return 0;
+
+    }
+
+}
