@@ -1,0 +1,55 @@
+/*
+    Realize a soma de dois elementos. Faça isso através de uma função, a qual será chamada
+    na função principal.
+*/
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+
+int function(int x, int y){
+
+    if(x>0 && y>0){
+
+        printf("Esta localizado no quadrante:");
+        return 1;
+    }
+
+    if(x>0 && y<0){
+
+        printf("Esta localizado no quadrante:");
+        return 2;
+    }
+
+    if(x<0 && y<0){
+
+        printf("Esta localizado no quadrante:");
+        return 3;
+    }
+
+    if(x<0 && y>0){
+
+        printf("Esta localizado no quadrante:");
+        return 4;
+    }
+
+    else{
+
+        printf("Seu x ou y estao no localizados no eixo:");
+        return 0;
+    }
+}
+
+int main(){
+
+    int x , y;
+
+    printf("Insira o valor de x e y:\n");
+    scanf("%d",&x);
+    scanf("%d",&y);
+
+
+    printf("%d",function(x,y));
+
+
+}
