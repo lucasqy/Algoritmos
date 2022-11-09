@@ -1,1 +1,28 @@
+/*
+    Construa um programa inicializando uma variável qualquer mostrando ao final seu
+    resultado através de um ponteiro que aponta para outro ponteiro.
+*/
 
+#include<stdio.h>
+#include<string.h>
+#include<conio.h>
+
+int main(){
+
+    int *ponteiro1;
+    int **ponteiro2;
+    int num;
+
+    ponteiro1 = &num;
+    ponteiro2 = &ponteiro1;
+
+    printf("digite um numero:\n");
+    scanf("%d",&num);
+
+    system("cls");
+
+    printf("Valor inicial: %d\n",num);
+    printf("Ponteiro 1: %d\n",*ponteiro1);
+    printf("Ponteiro 2: %d\n",**ponteiro2);
+
+}
