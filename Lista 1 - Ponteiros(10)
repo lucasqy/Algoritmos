@@ -1,0 +1,23 @@
+/*
+    Desenvolva um algoritmo onde o usuário entra com uma string e retorne como
+    saída a string invertida. Para isso utilize a função strrev(), a qual possui a sintaxe:
+    strrev(string).
+*/
+
+#include<stdio.h>
+#include<string.h>
+#include<conio.h>
+
+int main(){
+
+    char string[50];
+
+    printf("Entre com a string:\n");
+    gets(string);
+
+    strrev(string);
+
+    puts(string);
+
+    return 0;
+}
