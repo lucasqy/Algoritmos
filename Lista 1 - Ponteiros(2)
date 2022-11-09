@@ -1,0 +1,38 @@
+/*
+    Faça um programa que seja capaz de comparar o endereço de dois ponteiros. Caso
+    o primeiro endereço seja maior que o segundo imprima o resultado da subtração do
+    primeiro endereço menos o segundo. Caso contrário imprima a subtração realizada
+    entre o segundo endereço menos o primeiro
+*/
+
+#include<stdio.h>
+#include<string.h>
+#include<conio.h>
+
+int main(){
+
+    int *ponteiro1;
+    int *ponteiro2;
+
+    int num1=10;
+    int num2=7;
+
+    int subtracao=0;
+
+    ponteiro1 = &num1;
+    ponteiro2 = &num2;
+
+    if(&ponteiro1 > &ponteiro2){
+
+        subtracao = &ponteiro1 - &ponteiro2;
+    }
+
+    if(&ponteiro1 < &ponteiro2){
+
+        subtracao = &ponteiro2 - &ponteiro1;
+    }
+
+    printf("%d",subtracao);
+
+    return 0;
+}
