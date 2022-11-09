@@ -1,0 +1,51 @@
+/*
+    Desenvolva um algoritmo onde o usuário entra com uma string e retorne como
+    saída a string invertida. Para isso utilize a função strrev(), a qual possui a sintaxe:
+    strrev(string).
+*/
+
+#include<stdio.h>
+#include<string.h>
+#include<conio.h>
+
+int main(){
+
+    char string[100]= "Eu vou largar minha casa e vou morar no cabare";
+
+    int contmaiscula=0;
+    int contminuscula=0;
+    int contconsoantes=0;
+    int contvogais=0;
+
+    char vogais[] ="aeiouAEIOU";
+
+
+    for (int i=0 ;i<strlen(string); i++){
+
+        if(string[i]>A && string[i]<Z){
+            contmaiscula++;
+    }
+
+        if(string[i])>a && string[i]<z{
+            contminuscula++;
+        }
+
+    for (int i=0 ;i<strlen(string); i++){
+
+        if(string[i] = vogais){
+            contvogais++;
+        }
+
+        else{
+            contconsoantes++;
+        }
+    }
+
+
+    printf("Numero de letras maisculas: %d",contmaiscula);
+    printf("Numero de letras minusculas: %d",contminuscula);
+    printf("Numero de vogais: %d",contvogais);
+    printf("Numero de consoantes: %d",contconsoantes);
+
+    return 0;
+}
