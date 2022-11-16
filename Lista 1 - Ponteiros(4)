@@ -1,0 +1,54 @@
+#include<stdio.h>
+#define M 10
+
+int main(){
+
+    int matrix[M][M];
+    int *ponteiro;
+
+    int cont1 = 0;
+    int cont2 = 0;
+    int soma = 0;
+
+    ponteiro = &matrix[0][0];
+
+    printf("Atribuindo 0 a toda matrix:");
+    printf("\n\n");
+
+    for (int cont1=0; cont1<M; cont1++){
+        for (int cont2=0; cont2<M; cont2++){
+
+            matrix[cont1][cont2]=0.0;
+        }
+    }
+
+    for (int cont1=0; cont1<M; cont1++){
+        for (int cont2=0; cont2<M; cont2++){
+
+            printf("%d",*ponteiro);
+        }
+    }
+
+    getch();
+
+    system("cls");
+
+    ponteiro = &matrix[0][0];
+
+    printf("Atribuindo numeros em ordem crescente na matrix:");
+    printf("\n\n");
+
+    for (int cont1=0; cont1<M; cont1++){
+        for (int cont2=0; cont2<M; cont2++){
+
+          /*
+            *ponteiro = soma;
+            soma++;
+            ponteiro++;
+          */
+            (*ponteiro)++;
+
+            printf("%d",*ponteiro);
+        }
+    }
+}
