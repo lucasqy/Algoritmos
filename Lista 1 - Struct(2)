@@ -1,0 +1,62 @@
+#include<stdio.h>
+#include<string.h>
+#define trm 2
+
+/* Escreva um programa que peça ao utilizador o número, nome e nota de dois testes dos alunos de uma
+turma, guarde essa informação numa estrutura, e mostre a pauta com os seguintes campos: número,
+nome, nota1, nota2, média. */
+
+int main(){
+
+    int media[trm];
+
+    struct cadastro{
+
+        char numero[20];
+        char nome[20];
+        int nota1;
+        int nota2;
+
+    };
+
+    struct cadastro cdr[trm];
+
+    for (int i=0;i<trm;i++){
+
+        printf("Digite o numero:\n");
+        scanf("%s",cdr[i].numero);
+
+        printf("Digite o nome:\n");
+        scanf("%s",cdr[i].nome);
+
+        printf("Digite a nota 1:\n");
+        scanf("%d",&cdr[i].nota1);
+
+        printf("Digite a nota 2:\n");
+        scanf("%d",&cdr[i].nota2);
+
+        media[i]= cdr[i].nota1 + cdr[i].nota2/trm;
+
+        printf("\n");
+    }
+
+    system("cls");
+
+    for (int i=0;i<trm;i++){
+
+        printf("Numero: %s\n",cdr[i].numero);
+
+        printf("Nome: %s\n",cdr[i].nome);
+
+        printf("Nota 1: %d\n",cdr[i].nota1);
+
+        printf("Nota 2: %d\n",cdr[i].nota2);
+
+        printf("Media: %d",media[i]);
+
+        printf("\n");
+        printf("\n");
+
+    }
+
+}
