@@ -1,0 +1,50 @@
+#include<stdio.h>
+#include<string.h>
+
+/* Construa uma estrutura chamada endereço. Ela deve solicitar a 5 usuários o seu nome, a sua rua, o
+seu número e o andar em que mora. Após imprima os dados digitados pelo usuário. */
+
+int main(){
+
+    struct endereco{
+
+        char nome[20];
+        char rua[20];
+        char telefone[10];
+        char andar[10];
+
+    };
+    struct endereco end[5];
+
+    for (int i=0;i<5;i++){
+
+        printf("Digite o nome:\n");
+        scanf("%s",end[i].nome);
+
+        printf("Digite o rua:\n");
+        scanf("%s",end[i].rua);
+
+        printf("Digite o telefone:\n");
+        scanf("%s",end[i].telefone);
+
+        printf("Digite o andar:\n");
+        scanf("%s",end[i].andar);
+    }
+
+    system("cls");
+
+    for (int i=0;i<5;i++){
+
+        printf("Nome: %s\n",end[i].nome);
+
+        printf("Rua: %s\n",end[i].rua);
+
+        printf("Telefone: %s\n",end[i].telefone);
+
+        printf("Andar: %s\n",end[i].andar);
+
+        printf("\n");
+
+    }
+
+}
