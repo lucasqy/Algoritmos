@@ -1,0 +1,55 @@
+#include<stdio.h>
+#include<string.h>
+#define hbt 3
+
+/* A prefeitura de uma cidade fez uma pesquisa entre os seus habitantes, coletando dados sobre o
+salário e o número de filhos. Faça rotinas que:
+a. Leia esses dados;
+b. Calcule a média do salário da população;
+c. Calcule a média de números de filhos;
+d. Percentual de pessoas com salário até R$ 350,00*/
+
+int main(){
+
+    int mediasalario=0;
+    int medianmrfilhos=0;
+    int salario_acima_de_trezentos_e_cinquenta=0;
+
+    struct habitantes{
+
+        int salario;
+        int nmrfilhos;
+
+    };
+
+    struct habitantes cdr[hbt];
+
+    for (int i=0;i<hbt;i++){
+
+        printf("Digite o salario:\n");
+        scanf("%d",&cdr[i].salario);
+
+        printf("Digite o numero de filhos:\n");
+        scanf("%d",&cdr[i].nmrfilhos);
+
+        mediasalario += cdr[i].salario / hbt;
+        medianmrfilhos += cdr[i].nmrfilhos / hbt;
+
+        if(cdr[i].salario > 350){
+            salario_acima_de_trezentos_e_cinquenta++;
+        }
+    }
+
+    system("cls");
+
+        printf("Media de salarios: %d\n",mediasalario);
+
+        printf("Media de filhos: %d\n",medianmrfilhos);
+
+        printf("Salarios acima de 350: %d\n",salario_acima_de_trezentos_e_cinquenta);
+
+        printf("\n");
+        printf("\n");
+
+        
+}
