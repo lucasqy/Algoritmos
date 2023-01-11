@@ -1,0 +1,62 @@
+#include<stdio.h>
+#include<string.h>
+#define nmr 2
+
+/* Considere que uma empresa precisa armazenar os seguintes dados de um cliente:
+1- Nome completo com no máximo 50 caracteres;
+2- renda mensal do cliente;
+3- ano de nascimento;
+4- possui ou não carro. */
+
+int main(){
+
+
+    struct clientes{
+
+        char nome_completo[50];
+        float renda;
+        int anonasc;
+        char carro[3];
+
+    };
+
+    struct clientes clt[nmr];
+
+    for (int i=0;i<nmr;i++){
+
+        printf("Entre com seu nome completo:\n");
+        gets(clt[i].nome_completo);
+
+        printf("Entre com a sua renda:\n");
+        scanf("%f",&clt[i].renda);
+
+        printf("Entre com o ano de seu nascimento:\n");
+        scanf("%d",&clt[i].anonasc);
+
+        printf("Você possui carro?\n");
+        gets(clt[i].carro);
+
+        }
+    }
+
+    system("cls");
+
+    for (int i=0;i<nmr;i++){
+
+    printf("Nome completo:");
+    puts(clt[i].nome_completo);
+
+    printf("\n");
+
+    printf("Renda mensal: %0.2f\n",renda);
+
+    printf("Ano de nascimento: %d\n",anonasc);
+
+    printf("Você ");
+    puts(clt[i].carro);
+    printf("carro".);
+
+    printf("\n");
+    printf("\n");
+        }
+}
