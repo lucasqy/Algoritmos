@@ -1,0 +1,89 @@
+#include<stdio.h>
+#include<string.h>
+#define nmr 2
+
+/* Fazer um programa que realize o cadastro de contas bancárias com as seguintes informações:
+Número da conta, nome do cliente e saldo. O banco permitirá o cadastramento de apenas 15 contas e
+não pode haver mais de uma conta com o mesmo número. Crie o menu de opções a seguir:
+Menu de Opções:
+1. Cadastrar contas
+2. Visualizar todas as contas
+3. Excluir a conta com menor saldo(suponha que não tem saldos iguais)
+4. Sair
+ */
+
+int main(){
+
+    int op;
+    int mnrsld=9999999;
+
+    struct contas{
+
+        char nome[20];
+        char conta[5];
+        int saldo;
+
+    };
+    struct contas cnt[nmr];
+
+        printf("1- Para cadastrar uma conta.");
+        printf("2- Para vizualizar todas as contas.");
+        printf("3- Para excluir a conta com menor saldo.");
+        printf("4- Sair.");
+        scanf("%d",&op);
+
+
+    switch(op){
+
+        case 1:
+
+            printf("Digite o nome:\n");
+            scanf("%s",cnt[i].nome);
+
+
+            printf("Digite o numero da conta:\n");
+            scanf("%s",cnt[i].conta);
+
+            printf("Digite o saldo:\n");
+            scanf("%d",&cnt[i].saldo);
+
+            printf("\n");
+
+            if(cnt[i].saldo < mnrsld){
+                mnrsld = cnt.[i].saldo;
+            }
+
+            break;
+
+
+        case 2:
+
+            for(int i=0;i<nmr;i++){
+
+            printf("Nome: %s\n",cnt[i].nome);
+
+            printf("Numero da conta: %s\n",cnt[i].conta);
+
+            printf("Seu saldo eh: %s\n",cnt[i].saldo);
+
+            printf("\n");
+            }
+
+            break;
+
+
+        case 3:
+
+            for (int i=0;i<nmr;i++){
+
+                if(cnt[i].saldo == mnrsld){
+                    cnt[i] = 
+                }
+
+            }
+
+
+    }
+
+
+}
