@@ -1,0 +1,56 @@
+#include<stdio.h>
+#include<math.h>
+#define nmr 1
+
+/*-
+A empresa XKW concedeu um bônus de 20% do valor do salário a todos os funcionários com
+tempo de trabalho na empresa igual ou superior a 5 anos e de 10% aos demais. Faça um um
+programa em C que receba o salário e o tempo de serviço de um funcionário, calcule e mostre o
+valor do bônus recebido por ele
+*/
+
+int function(){
+
+
+}
+
+int main(){
+
+    float salario[nmr];
+    int tmpsrv[nmr];
+
+    for (int i=0;i<nmr;i++){
+
+        printf("Entre com seu salario:\n");
+        scanf("%f",&salario[i]);
+
+        printf("Entre com seu tempo de servico (em anos):\n");
+        scanf("%f",&tmpsrv[i]);
+
+        printf("\n");
+
+        if(tmpsrv[i] >= 5){
+
+        salario[i] = 0.2 * salario[i];
+
+        }
+
+        else{
+
+        salario[i] = 0.1 * salario[i];
+
+        }
+
+    }
+
+    system("cls");
+
+    for (int i=0;i<nmr;i++){
+
+        printf("Seu salario agora eh de: %f\n",salario[i]);
+
+    }
+
+
+}
+
