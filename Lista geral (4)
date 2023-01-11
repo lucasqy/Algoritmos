@@ -1,0 +1,71 @@
+#include<stdio.h>
+#include<string.h>
+#define hbt 2
+
+/*
+    A prefeitura de uma cidade fez uma pesquisa com 200 pessoas, coletando dados sobre o salário e
+    o número de filhos. A prefeitura deseja saber:
+    • A média do salário dessas pessoas
+    • A média do número de filhos
+    • O maior salário
+    • A percentagem de pessoas com salários até R$ 150,00.
+
+*/
+
+int main(){
+
+    float maiorslr=0;
+    float contslr=0;
+    float mediaslr=0;
+    float mediaflh=0;
+
+    struct pessoas{
+
+        float salarios;
+        float filhos;
+    };
+
+    struct pessoas pss[hbt];
+
+    for (int i=0;i<hbt;i++){
+
+    printf("Insira seu salario:\n");
+    scanf("%f",&pss[i].salarios);
+
+    printf("Insira quantos filhos voce tem:\n");
+    scanf("%f",&pss[i].filhos);
+
+    if(pss[i].salarios > maiorslr){
+        maiorslr = pss[i].salarios;
+    }
+
+    if(pss[i].salarios <= 150){
+        contslr++;
+    }
+
+    contslr = contslr / hbt;
+
+    mediaslr += pss[i].salarios;
+
+    mediaflh += pss[i].filhos;
+
+    }
+
+    mediaslr = mediaslr / hbt;
+    mediaflh = mediaflh / hbt;
+
+    system("cls");
+
+    for (int i=0;i<1;i++){
+
+        printf("A media dos salarios e:%f\n",mediaslr);
+
+        printf("A media do número de filhos e:%f\n",mediaflh);
+
+        printf("O maior salario e:%f\n",maiorslr);
+
+        printf("A porcentagem de pessoas com salario maior que 150 e: %f\n",contslr);
+
+        printf("\n");
+    }
+}
