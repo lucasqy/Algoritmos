@@ -1,0 +1,41 @@
+#include<stdio.h>
+
+/*
+Um determinado material radioativo perde metade de sua massa a cada 50 segundos. Dada a
+massa inicial, em gramas, fazer um programa em C que calcule o tempo necessário para que essa
+massa se torne menor que 0,5 grama. O programa em C deve escrever a massa inicial, a massa
+final e o tempo calculado em horas, minutos e segundos.
+*/
+
+int main(){
+
+    float massa;
+    int secs=0;
+    int minutos=0;
+    int horas=0;
+
+    printf("Entre com a massa do objeto (em gramas):\n");
+    scanf("%f",&massa);
+
+    while(massa > 0.5){
+
+    massa *= 0.5;
+
+    secs += 50;
+
+    if(secs >= 60){
+        secs -= 60;
+        minutos += 1;
+    }
+
+    if(minutos >= 60){
+        minutos -= 60;
+        horas += 1;
+    }
+
+    }
+
+
+    printf("Levara %d horas, %d minutos e %d segundos para a massa atingir 0,5 gramas.",horas,minutos,secs);
+
+}
