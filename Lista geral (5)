@@ -1,0 +1,74 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+/* Preencha um vetor com 5 elementos de forma aleatória e mostre esses valores de forma inversa.
+Após, faça a soma desses valores e encontre o maior e o menor elemento. No final digite um valor
+e veja se o mesmo está no vetor. Caso o número esteja no vetor diga quantas vezes ele se repete.
+Mostre todos os resultados.
+*/
+
+int main(){
+    srand(time(NULL));
+
+    int vecoriginal[5];
+    int vecreverso[5];
+    int somavec=0;
+    int menornmr=100;
+    int maiornmr=0;
+
+    int vec[5];
+
+    for (int i=0;i<5;i++){
+
+        vec[i] = rand()%10;
+    }
+
+    for (int i=5;i>=0;i--){
+
+        vecreverso[i] = vec[i];
+
+    }
+
+    for (int i=0; i<5;i++){
+
+        somavec+= vec[i];
+
+    }
+
+    for (int i=0;i<5;i++){
+
+        if(vec[i] < menornmr){
+            menornmr = vec[i];
+        }
+
+        if(vec[i] > maiornmr){
+            maiornmr = vec[i];
+        }
+    }
+
+    printf("O vetor original:\n");
+
+    for (int i=0;i<5;i++){
+
+        printf("%d",vec[i]);
+    }
+
+    printf("\n");
+
+    printf("O vetor invertido:\n");
+
+    for (int i=4;i>=0;i--){
+
+        printf("%d",vecreverso[i]);
+    }
+
+    printf("\n");
+
+    printf("A soma dos elementos do vetor:%d\n",somavec);
+
+    printf("O menor numero:%d\n",menornmr);
+
+    printf("O maior numeor:%d\n",maiornmr);
+
+}
